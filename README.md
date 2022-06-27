@@ -42,8 +42,8 @@ $ git clone <https://github.com/eduardobrandao/TestePulse>
 
 #### Executando a Imagem Docker
 
-$
-$
+$ Mensagem para executar a imagem Docker
+$ Depois que executar a imagem Docker podemos passar para o proximo passso.
 
 #### Podemos executar um desses comandos abaixo, para instalar as dependencias
 
