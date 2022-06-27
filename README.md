@@ -40,6 +40,11 @@ $ git clone <https://github.com/eduardobrandao/TestePulse>
 
 ## $ cd projeto
 
+#### Executando a Imagem Docker
+
+$
+$
+
 #### Podemos executar um desses comandos abaixo, para instalar as dependencias
 
 $ yarn install  
