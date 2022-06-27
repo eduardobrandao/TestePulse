@@ -40,7 +40,7 @@ $ git clone <https://github.com/eduardobrandao/TestePulse>
 
 ## $ cd projeto
 
-#### Podemos dar um desses comandos abaixo, para instalar as dependencias
+#### Podemos executar um desses comandos abaixo, para instalar as dependencias
 
 $ yarn install  
 $ npm install
