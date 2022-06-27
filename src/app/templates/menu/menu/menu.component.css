@@ -1,0 +1,20 @@
+.sidenav {
+  background-color: #D6FBC8;
+  width: 200px;
+}
+
+.sidenav a {
+  color: #000000;
+  cursor: pointer;
+}
+.sidenav a :hover {
+  color:#D66C1B;
+}
+
+.sidenav i {
+  padding-right: 10px;
+  font-size: 16px;
+}
+.a-exit {
+  cursor: pointer;
+}
