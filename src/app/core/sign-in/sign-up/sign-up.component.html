@@ -1,9 +1,17 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
@@ -12,80 +20,185 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 login-sec">
-        <h2 class="text-center">MultBank - Criando Conta</h2>
-        <form class="login-form" [formGroup]="orderForm" #form="ngForm" (ngSubmit)="createClientUser()">
-
+        <h2 class="text-center">PulseBank - Criando Conta</h2>
+        <form
+          class="login-form"
+          [formGroup]="orderForm"
+          #form="ngForm"
+          (ngSubmit)="createClientUser()"
+        >
           <div class="form-group">
             <label for="exampleInputEmail1" class="text-uppercase">Nome</label>
-            <input type="text" class="form-control" placeholder="" formControlName="nome"
-              [ngClass]="{'is-invalid': orderForm.get('nome').errors?.required && (form.submitted || orderForm.get('nome').touched)}">
+            <input
+              type="text"
+              class="form-control"
+              placeholder=""
+              formControlName="nome"
+              [ngClass]="{
+                'is-invalid':
+                  orderForm.get('nome').errors?.required &&
+                  (form.submitted || orderForm.get('nome').touched)
+              }"
+            />
             <app-v-message
-              *ngIf="orderForm.get('nome').errors?.required && (form.submitted || orderForm.get('nome').touched)"
-              text="Campo nome é necessário">
+              *ngIf="
+                orderForm.get('nome').errors?.required &&
+                (form.submitted || orderForm.get('nome').touched)
+              "
+              text="Campo nome é necessário"
+            >
             </app-v-message>
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1" class="text-uppercase">E-mail</label>
-            <input type="email" class="form-control" placeholder="" formControlName="email"
-              [ngClass]="{'is-invalid': orderForm.get('email').errors?.required  && (form.submitted || orderForm.get('email').touched)}">
-            <app-v-message *ngIf="orderForm.get('email').errors?.required  && (form.submitted || orderForm.get('email').touched)" text="Campo email é necessário">
-            </app-v-message>
-          </div>
-
-          <div class="form-group">
-            <label for="exampleInputPassword1" class="text-uppercase">Password</label>
-            <input type="password" class="form-control" placeholder="" formControlName="password"
-              [ngClass]="{'is-invalid': orderForm.get('password').errors?.required && (form.submitted || orderForm.get('password').touched)}">
+            <label for="exampleInputPassword1" class="text-uppercase"
+              >E-mail</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              placeholder=""
+              formControlName="email"
+              [ngClass]="{
+                'is-invalid':
+                  orderForm.get('email').errors?.required &&
+                  (form.submitted || orderForm.get('email').touched)
+              }"
+            />
             <app-v-message
-              *ngIf="orderForm.get('password').errors?.required && (form.submitted || orderForm.get('password').touched)"
-              text="Campo password é necessário">
-            </app-v-message>
-            <app-v-message *ngIf="orderForm.get('password').errors?.min && (form.submitted || orderForm.get('password').touched)"
-              text="Campo password deve conter no minimo 6 digitos " ></app-v-message>
-          </div>
-
-          <div class="form-group">
-            <label for="exampleInputPassword1" class="text-uppercase">CPF</label>
-            <input type="text" class="form-control" formControlName="cpf"
-              [ngClass]="{'is-invalid': orderForm.get('cpf').errors?.required && (form.submitted || orderForm.get('cpf').touched)} " mask="000.000.000-00" >
-            <app-v-message *ngIf="orderForm.get('cpf').errors?.required && (form.submitted || orderForm.get('cpf').touched)" text="Campo cpf é necessário"></app-v-message>
-            <app-v-message *ngIf="orderForm.get('cpf').errors?.maxlength && (form.submitted || orderForm.get('cpf').touched)" text="Campo cpf deve conter 11 digitos">
-            </app-v-message>
-            <app-v-message *ngIf="orderForm.get('cpf').errors?.pattern && (form.submitted || orderForm.get('cpf').touched)" text="Campo cpf invalido !">
+              *ngIf="
+                orderForm.get('email').errors?.required &&
+                (form.submitted || orderForm.get('email').touched)
+              "
+              text="Campo email é necessário"
+            >
             </app-v-message>
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1" class="text-uppercase">Data Nascimento</label>
-            <input type="date" class="form-control" placeholder="" formControlName="dateOfBirth"
-              [ngClass]="{'is-invalid': orderForm.get('dateOfBirth').errors?.required && (form.submitted || orderForm.get('dateOfBirth').touched)}">
-            <app-v-message *ngIf="orderForm.get('dateOfBirth').errors?.required && (form.submitted || orderForm.get('dateOfBirth').touched)"
-              text="Campo data Nascimento é necessário"></app-v-message>
+            <label for="exampleInputPassword1" class="text-uppercase"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              placeholder=""
+              formControlName="password"
+              [ngClass]="{
+                'is-invalid':
+                  orderForm.get('password').errors?.required &&
+                  (form.submitted || orderForm.get('password').touched)
+              }"
+            />
+            <app-v-message
+              *ngIf="
+                orderForm.get('password').errors?.required &&
+                (form.submitted || orderForm.get('password').touched)
+              "
+              text="Campo password é necessário"
+            >
+            </app-v-message>
+            <app-v-message
+              *ngIf="
+                orderForm.get('password').errors?.min &&
+                (form.submitted || orderForm.get('password').touched)
+              "
+              text="Campo password deve conter no minimo 6 digitos "
+            ></app-v-message>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="text-uppercase"
+              >CPF</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              formControlName="cpf"
+              [ngClass]="{
+                'is-invalid':
+                  orderForm.get('cpf').errors?.required &&
+                  (form.submitted || orderForm.get('cpf').touched)
+              }"
+              mask="000.000.000-00"
+            />
+            <app-v-message
+              *ngIf="
+                orderForm.get('cpf').errors?.required &&
+                (form.submitted || orderForm.get('cpf').touched)
+              "
+              text="Campo cpf é necessário"
+            ></app-v-message>
+            <app-v-message
+              *ngIf="
+                orderForm.get('cpf').errors?.maxlength &&
+                (form.submitted || orderForm.get('cpf').touched)
+              "
+              text="Campo cpf deve conter 11 digitos"
+            >
+            </app-v-message>
+            <app-v-message
+              *ngIf="
+                orderForm.get('cpf').errors?.pattern &&
+                (form.submitted || orderForm.get('cpf').touched)
+              "
+              text="Campo cpf invalido !"
+            >
+            </app-v-message>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="text-uppercase"
+              >Data Nascimento</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              placeholder=""
+              formControlName="dateOfBirth"
+              [ngClass]="{
+                'is-invalid':
+                  orderForm.get('dateOfBirth').errors?.required &&
+                  (form.submitted || orderForm.get('dateOfBirth').touched)
+              }"
+            />
+            <app-v-message
+              *ngIf="
+                orderForm.get('dateOfBirth').errors?.required &&
+                (form.submitted || orderForm.get('dateOfBirth').touched)
+              "
+              text="Campo data Nascimento é necessário"
+            ></app-v-message>
           </div>
 
           <div class="form-check">
-            <button type="submit" class="btn btn-login float-right" >Submit</button>
+            <button type="submit" class="btn btn-login float-right">
+              Submit
+            </button>
           </div>
-
         </form>
         <div class="copy-text">
           <a (click)="singIn()">Voltar</a>
         </div>
       </div>
       <div class="col-md-8 banner-sec">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
               <div class="carousel-caption d-none d-md-block">
                 <div class="banner-text">
-                  <h2>MultBank</h2>
-                  <p>O banco mais perto do cliente, sem taxa e juros </p>
+                  <h2>PulseBank</h2>
+                  <p>O banco mais perto do cliente, sem taxa e juros</p>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
+  </div>
+</section>

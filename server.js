@@ -4,10 +4,10 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-app.use(express.static(__dirname + 'dist/MultBank-spa'));
+app.use(express.static(__dirname + 'dist/PulseBank'));
 
 app.get('/*', (req, res) => {
-  res.sendFile(__dirname + 'dist/MultBank-spa/index.html')
+  res.sendFile(__dirname + 'dist/PulseBank/index.html')
 })
 
 app.listen(PORT, () => {
