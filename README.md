@@ -54,8 +54,7 @@ $ npm install
 
 #### Execute a aplicação em modo de desenvolvimento, Podemos dar um desses comandos abaixo
 
-$ yarn start
-$ npm start
+$ ng serve
 
 #### O servidor iniciará na porta: 4200 - acesse <http://localhost:4200>
 
